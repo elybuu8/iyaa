@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rhian's Website - My Goals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --dark-purple:#1a0023;
+    --purple:#5a189a;
+    --orchid:#c77dff;
+    --plum:#7b2cbf;
+    --soft:#f5e6ff;
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Fredoka', sans-serif;
+    background: linear-gradient(135deg, var(--dark-purple), #2b0a3d);
+    color:var(--soft);
+    overflow-x:hidden;
+}
+
+/* ⭐ STARS */
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:var(--orchid);
+    border-radius:50%;
+    opacity:0.7;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    0%{transform:scale(1);opacity:0.3;}
+    50%{transform:scale(1.5);opacity:1;}
+    100%{transform:scale(1);opacity:0.3;}
+}
+
+/* HEADER */
+header{
+    background:var(--dark-purple);
+    padding:50px 20px 20px;
+    border-bottom:2px solid var(--orchid);
+    text-align:center;
+}
+
+header h1{
+    font-family:'Orbitron';
+    font-size:40px;
+    color:var(--orchid);
+    text-shadow:0 0 10px var(--plum);
+}
+
+/* NAV */
+nav{margin-top:20px;}
+
+.nav-btn{
+    position:relative;
+    display:inline-block;
+    margin:8px;
+    padding:12px 28px;
+    background:linear-gradient(135deg,var(--purple),var(--plum));
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-family:'Orbitron';
+    overflow:hidden;
+    box-shadow:0 0 10px var(--orchid);
+    transition:0.3s ease;
+}
+
+/* SHINE */
+.nav-btn::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-150%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.7),transparent);
+    transform:skewX(-25deg);
+    animation:shine 2.5s infinite;
+}
+
+@keyframes shine{
+    0%{left:-150%;}
+    100%{left:150%;}
+}
+
+/* HOVER EFFECT */
+.nav-btn:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 20px var(--orchid), 0 0 40px var(--plum);
+    background:#120016;
+}
+
+/* CONTAINER */
+.container{
+    max-width:950px;
+    margin:40px auto;
+    padding:30px;
+    background:rgba(199,125,255,0.08);
+    border-radius:15px;
+    box-shadow:0 0 20px var(--purple);
+}
+
+/* TITLE */
+.container h2{
+    font-family:'Orbitron';
+    text-align:center;
+    color:var(--orchid);
+    margin-bottom:25px;
+    font-size:28px;
+    text-shadow:0 0 10px var(--plum);
+}
+
+/* TEXT BLOCK */
+.text{
+    font-size:18px;
+    line-height:2;
+    text-align:justify;
+}
+
+/* SECTION BOX */
+.block{
+    margin-bottom:20px;
+    padding:15px;
+    border-left:4px solid var(--orchid);
+    background:rgba(199,125,255,0.05);
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    background:var(--dark-purple);
+    border-top:2px solid var(--orchid);
+    font-family:'Orbitron';
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ⭐ STARS -->
+<script>
+for(let i=0;i<50;i++){
+    let star=document.createElement('div');
+    star.className='star';
+    star.style.top=Math.random()*100+'%';
+    star.style.left=Math.random()*100+'%';
+    document.body.appendChild(star);
+}
+</script>
+
+<header>
+    <h1>My Goals ✨</h1>
+
+    <nav>
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="about.html" class="nav-btn">About Me</a>
+        <a href="contacts.html" class="nav-btn">Contacts</a>
+        <a href="goals.html" class="nav-btn">My Goals</a>
+        <a href="envi.html" class="nav-btn">My Environment</a>
+        <a href="future.html" class="nav-btn">My Future Me</a>
+        <a href="street.html" class="nav-btn">Street Photography</a>
+        <a href="brand.html" class="nav-btn">My Brand, My Logo</a>
+        <a href="thankyou.html" class="nav-btn">Thank You</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>🌱 My Life Goals & Aspirations</h2>
+
+    <div class="block text">
+        My personal website reflects the goals and values that guide my life and growth. It focuses on personal development, where I document lessons learned, skills I am building, and habits that help me become a better version of myself.
+    </div>
+
+    <div class="block text">
+        I also share my journey toward financial stability, including my plans, progress, and insights about managing money wisely.
+    </div>
+
+    <div class="block text">
+        A part of the site is dedicated to travel, especially my dream destinations like Paris and Switzerland, where I hope to explore new cultures and experiences.
+    </div>
+
+    <div class="block text">
+        I highlight the importance of health and fitness by sharing how I take care of my well-being.
+    </div>
+
+    <div class="block text">
+        Another meaningful section celebrates family and friends, recognizing the relationships that support and inspire me.
+    </div>
+
+    <div class="block text">
+        Lastly, I express my passion for cooking, where I share recipes, food ideas, and the joy I find in preparing meals.
+    </div>
+
+    <div class="block text">
+        Through this website, I aim to capture my journey, track my goals, and reflect on the experiences that shape my life.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Rhian's Website
+</footer>
+
+</body>
+</html>
